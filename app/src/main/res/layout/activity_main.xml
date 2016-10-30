@@ -17,14 +17,14 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="56dp"
-        android:id="@+id/button" />
+        android:id="@+id/bt_start" />
 
     <CheckBox
         android:text="Vibration On"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/button"
+        android:layout_toStartOf="@+id/bt_start"
         android:layout_marginTop="63dp"
         android:id="@+id/cb_vibration" />
 
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_above="@+id/button"
+        android:layout_above="@+id/bt_start"
         android:layout_centerHorizontal="true">
         <RadioButton
             android:text="Run till dead"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="47dp"
             android:id="@+id/rb_full"
-            android:layout_above="@+id/button"
+            android:layout_above="@+id/bt_start"
             android:layout_alignStart="@+id/cb_rendering"
             android:duplicateParentState="false"
             android:checked="true" />
