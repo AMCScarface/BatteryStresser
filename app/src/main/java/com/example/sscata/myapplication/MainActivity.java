@@ -1,5 +1,6 @@
 package com.example.sscata.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +8,8 @@ import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.Toast;
 import android.widget.Button;
+
+import static android.R.attr.value;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,12 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         duration = (RadioButton) findViewById(R.id.rb_full);
 
-        start = (Button) findViewById(R.id.bt_start);
-
-        start.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
                 String cat = "";
                 if(vibration.isChecked())
                 {
@@ -53,14 +50,19 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-                Toast.makeText(MainActivity.this, cat, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, cat, Toast.LENGTH_SHORT).show();
                 //else
                 //{
                 //    Toast.makeText(MainActivity.this,"First checkbox Unchecked", Toast.LENGTH_SHORT).show();
                 //}
+                //Intent myIntent = new Intent(MainActivity.this, MyGLActivity.class);
+                //myIntent.putExtra("key", value); //Optional parameters
+                //MainActivity.this.startActivity(myIntent);
+    }
 
-            }
-        });
+    public void startTest(View view){
+        Intent intent = new Intent(this, MyGLActivity.class);
+        startActivity(intent);
     }
 
 }

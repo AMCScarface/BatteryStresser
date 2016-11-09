@@ -17,7 +17,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="56dp"
-        android:id="@+id/bt_start" />
+        android:id="@+id/bt_start"
+        android:onClick="startTest" />
 
     <CheckBox
         android:text="Vibration On"
