@@ -61,8 +61,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startTest(View view){
-        Intent intent = new Intent(this, MyGLActivity.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, MyGLActivity.class);
+        //startActivity(intent);
+
+        Thread thread = new Thread( new Runnable() {
+            @Override
+            public void run() {
+                try
+                {
+                    Intent intent = new Intent(MainActivity.this, MyGLActivity.class);
+                    startActivity(intent);
+                    Thread.sleep(10000);
+                    Intent intent2 = new Intent(MainActivity.this, MyGLActivity.class);
+                    startActivity(intent2);
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+            finally {
+                //finish();
+            }
+        }
+    });
+
+    thread.start();
     }
 
 }

@@ -21,48 +21,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
-        <dex dex="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.0_5a970be2bf50ba76951a80d68225103e6a0890db/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="68add44347d5694ce950bd269054f02cf8b6098e">
-        <dex dex="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5ba2869419cf0ee6493563d80aa84634480cdbd2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
-        <dex dex="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_745bba1b1bff7e47a99201210b43c2c5357980f3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
         <dex dex="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_eb6f0c77f0c8380b39046afe5c797ea8c59ede19/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="26674000177e45447a0326a6ad84612761199a13">
-        <dex dex="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.0_d3acf5d4c15ab84b16be39556f8bc9b82ccd982d/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -106,7 +70,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="2600dbcc3d2008d489ae882b0ed97ea3b1b68667">
+        sha1="6c47131cc7b78866533def3e586e7a6771d6c56f">
         <dex dex="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_8cc03878d08e6f96585c33ed2563ea4c099285a8/classes.dex" />
     </item>
     <item
@@ -153,6 +117,42 @@
         revision="25.0.0"
         sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
         <dex dex="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.0.0_ce93bde1c5b282d972aecc002855422fb3c5ebf9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.0_5a970be2bf50ba76951a80d68225103e6a0890db/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="201fae0364e48345b606932f176cd2f38bbc858c">
+        <dex dex="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5ba2869419cf0ee6493563d80aa84634480cdbd2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_745bba1b1bff7e47a99201210b43c2c5357980f3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="/home/sscata/AndroidStudioProjects/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.0_d3acf5d4c15ab84b16be39556f8bc9b82ccd982d/classes.dex" />
     </item>
 
 </items>
