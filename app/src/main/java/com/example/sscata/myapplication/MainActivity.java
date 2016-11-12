@@ -79,17 +79,17 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(MainActivity.this,"Battery :" + "ok", Toast.LENGTH_SHORT).show();
         CSVWriter writer = null;
-        try
-        {
-            writer = new CSVWriter(new FileWriter("/sdcard/myfile.csv"), ',');
-            String[] entries = "first#second#third".split("#"); // array of your values
-           writer.writeNext(entries);
-            writer.close();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
+        //try
+        //{
+           // writer = new CSVWriter(new FileWriter("/sdcard/myfile.csv"), ',');
+            //String[] entries = "first#second#third".split("#"); // array of your values
+           //writer.writeNext(entries);
+           // writer.close();
+       // }
+        //catch (IOException e)
+        //{
+        //    e.printStackTrace();
+        //}
 
 
         Thread thread = new Thread( new Runnable() {
@@ -97,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 try
                 {
+                    Intent intent = new Intent(MainActivity.this, BlurActivity.class);
+                    startActivity(intent);
 
                     //Intent intent = new Intent(MainActivity.this, MyGLActivity.class);
                     //startActivity(intent);

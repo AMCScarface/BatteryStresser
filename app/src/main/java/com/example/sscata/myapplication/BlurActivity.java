@@ -17,6 +17,7 @@ import android.widget.ImageView;
 
 public class BlurActivity extends Activity {
 
+    private static final float BLUR_RADIUS = 25f;
     // Call back when the activity is started, to initialize the view
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,14 @@ public class BlurActivity extends Activity {
 
         this.setContentView(R.layout.activity_blur);
 
+        ImageView imageView = (ImageView) findViewById(R.id.imageView);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.blurimg);
+        Bitmap blurredBitmap;
+
+        for(int i = 0; i < 20; i++){
+            blurredBitmap= blur(bitmap);
+            imageView.setImageBitmap(blurredBitmap);
+        }
     }
 
     // Call back when the activity is going into the background
@@ -36,5 +45,22 @@ public class BlurActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+    }
+
+    public Bitmap blur(Bitmap image) {
+        if (null == image) return null;
+
+        Bitmap outputBitmap = Bitmap.createBitmap(image);
+        final RenderScript renderScript = RenderScript.create(this);
+        Allocation tmpIn = Allocation.createFromBitmap(renderScript, image);
+        Allocation tmpOut = Allocation.createFromBitmap(renderScript, outputBitmap);
+
+        //Intrinsic Gausian blur filter
+        ScriptIntrinsicBlur theIntrinsic = ScriptIntrinsicBlur.create(renderScript, Element.U8_4(renderScript));
+        theIntrinsic.setRadius(BLUR_RADIUS);
+        theIntrinsic.setInput(tmpIn);
+        theIntrinsic.forEach(tmpOut);
+        tmpOut.copyTo(outputBitmap);
+        return outputBitmap;
     }
 }
