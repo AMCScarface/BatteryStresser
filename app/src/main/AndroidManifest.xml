@@ -25,6 +25,12 @@
             android:name=".VibrationActivity"
             android:label="My Vibration">
         </activity>
+        <activity
+            android:name=".BlurActivity"
+            android:label="My Blur algorithm">
+        </activity>
     </application>
     <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 </manifest>
