@@ -32,6 +32,12 @@ public class ShaActivity extends Activity {
             byte[] b = new byte[in_s.available()];
             SHA1(convertToHex(b));
 
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    finish();
+                }
+            }, 5000);
         } catch (Exception e) {
             // e.printStackTrace();
             e.printStackTrace();

@@ -19,7 +19,7 @@ public class VibrationActivity extends Activity {
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         // Vibrate for 400 milliseconds
-        v.vibrate(10000);
+        v.vibrate(5000);
 
         this.setContentView(R.layout.activity_vibration);
         Handler handler = new Handler();
@@ -27,7 +27,7 @@ public class VibrationActivity extends Activity {
             public void run() {
                 finish();
             }
-        }, 13000);
+        }, 8000);
     }
 
     // Call back when the activity is going into the background

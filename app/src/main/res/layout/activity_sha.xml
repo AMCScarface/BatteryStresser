@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="Sha-1 encryption in progress..."
+        android:text="Sha-1 encryption completed..."
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/tf_sha"

@@ -25,7 +25,7 @@ public class MyGLActivity extends Activity {
             public void run() {
                 finish();
             }
-        }, 3000);
+        }, 5000);
     }
 
     // Call back when the activity is going into the background
