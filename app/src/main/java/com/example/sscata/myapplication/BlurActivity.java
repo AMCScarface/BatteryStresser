@@ -9,6 +9,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Handler;
 import android.renderscript.Allocation;
 import android.renderscript.Element;
 import android.renderscript.RenderScript;
@@ -33,6 +34,13 @@ public class BlurActivity extends Activity {
             blurredBitmap= blur(bitmap);
             imageView.setImageBitmap(blurredBitmap);
         }
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                finish();
+            }
+        }, 5000);
     }
 
     // Call back when the activity is going into the background

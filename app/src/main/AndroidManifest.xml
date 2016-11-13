@@ -29,6 +29,14 @@
             android:name=".BlurActivity"
             android:label="My Blur algorithm">
         </activity>
+        <activity
+            android:name=".VideoActivity"
+            android:label="My Video">
+        </activity>
+        <activity
+            android:name=".ShaActivity"
+            android:label="My Sha-1">
+        </activity>
     </application>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>

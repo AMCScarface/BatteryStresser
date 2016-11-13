@@ -30,8 +30,6 @@ import static android.R.attr.value;
 
 public class MainActivity extends AppCompatActivity {
 
-    CheckBox vibration, gputest, rendering;
-    RadioButton duration;
     Button start;
 
     public long myTime = System.currentTimeMillis();
@@ -59,8 +57,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startTest(View view){
-        //Intent intent = new Intent(this, MyGLActivity.class);
-        //startActivity(intent);
+
+        Intent intent = new Intent(this, ShaActivity.class);
+        startActivity(intent);
+        //for(int i = 0; i < 10; i++) {
+        //   Intent intent = new Intent(this, BlurActivity.class);
+         //   startActivity(intent);
+         //   Intent intent3 = new Intent(MainActivity.this, MyGLActivity.class);
+         //   startActivity(intent3);
+         //   Intent intent2 = new Intent(MainActivity.this, VibrationActivity.class);
+         //   startActivity(intent2);
+        //}
         //SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
         //Date d = null;
         //try {
@@ -90,32 +97,6 @@ public class MainActivity extends AppCompatActivity {
         //{
         //    e.printStackTrace();
         //}
-
-
-        Thread thread = new Thread( new Runnable() {
-            @Override
-            public void run() {
-                try
-                {
-                    Intent intent = new Intent(MainActivity.this, BlurActivity.class);
-                    startActivity(intent);
-
-                    //Intent intent = new Intent(MainActivity.this, MyGLActivity.class);
-                    //startActivity(intent);
-                    //Thread.sleep(5000);
-                    //Intent intent2 = new Intent(MainActivity.this, VibrationActivity.class);
-                    //startActivity(intent2);
-            }
-            catch (Exception e) {
-                e.printStackTrace();
-            }
-            finally {
-                //finish();
-            }
-        }
-    });
-
-    thread.start();
 
     }
 
