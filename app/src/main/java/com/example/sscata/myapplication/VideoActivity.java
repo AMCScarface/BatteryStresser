@@ -30,13 +30,12 @@ public class VideoActivity extends Activity {
 
         myVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.nebula));
 
-
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
                 finish();
             }
-        }, 5000);
+        }, 35000);
     }
 
     // Call back when the activity is going into the background

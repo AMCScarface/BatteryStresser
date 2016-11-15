@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     CSVWriter writer = null;
     Button start;
 
-    public long myTime = System.currentTimeMillis();
+    public long myTime;
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static String[] PERMISSIONS_STORAGE = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -68,8 +68,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startTest(View view){
-                Intent intent = new Intent(this, BlurActivity.class);
+        myTime =  System.currentTimeMillis();
+                Intent intent = new Intent(this, ShaActivity.class);
                 startActivityForResult(intent, 1);
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true){
+                    try {
+                        Thread.sleep(150000);
+                        String[] entries = null;
+                        String prepare = "00:00:00#" + ((System.currentTimeMillis() - myTime) / 1000) + "#" + getBatteryLevel();
+                        entries = prepare.split("#");
+
+                        generateCsvFile("myfile.csv", entries[0], entries[1], entries[2]);
+
+                        entries = null;
+                        prepare = null;
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            }
+        }).start();
 
         //SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
         //Date d = null;
@@ -124,60 +147,60 @@ public class MainActivity extends AppCompatActivity {
             // Make sure the request was successful
 
         if(requestCode == 1) {
-            String[] entries = null;
+          //  String[] entries = null;
 
-            String prepare = "00:00:00#" + ((System.currentTimeMillis() - myTime) / 1000) + "#" + getBatteryLevel();
-            entries = prepare.split("#");
+            //String prepare = "00:00:00#" + ((System.currentTimeMillis() - myTime) / 1000) + "#" + getBatteryLevel();
+         //   entries = prepare.split("#");
 
-            generateCsvFile("myfile.csv", entries[0], entries[1], entries[2]);
+         //   generateCsvFile("myfile.csv", entries[0], entries[1], entries[2]);
 
             Intent intent2 = new Intent(MainActivity.this, VibrationActivity.class);
             startActivityForResult(intent2, 2);
         }
 
         if(requestCode == 2 ){
-            String[] entries = null;
+         //  String[] entries = null;
 
-            String prepare = "00:00:00#" + ((System.currentTimeMillis() - myTime) / 1000) + "#" + getBatteryLevel();
-            entries = prepare.split("#");
+            //String prepare = "00:00:00#" + ((System.currentTimeMillis() - myTime) / 1000) + "#" + getBatteryLevel();
+            //entries = prepare.split("#");
 
-            generateCsvFile("myfile.csv", entries[0], entries[1], entries[2]);
+           // generateCsvFile("myfile.csv", entries[0], entries[1], entries[2]);
 
             Intent intent3 = new Intent(MainActivity.this, MyGLActivity.class);
             startActivityForResult(intent3,3);
         }
 
         if(requestCode == 3) {
-            String[] entries = null;
+           // String[] entries = null;
 
-            String prepare = "00:00:00#" + ((System.currentTimeMillis() - myTime) / 1000) + "#" + getBatteryLevel();
-            entries = prepare.split("#");
+         //   String prepare = "00:00:00#" + ((System.currentTimeMillis() - myTime) / 1000) + "#" + getBatteryLevel();
+           // entries = prepare.split("#");
 
-            generateCsvFile("myfile.csv", entries[0], entries[1], entries[2]);
+           // generateCsvFile("myfile.csv", entries[0], entries[1], entries[2]);
 
             Intent intent4 = new Intent(this, ShaActivity.class);
             startActivityForResult(intent4,4);
         }
 
         if(requestCode == 4) {
-            String[] entries = null;
+           // String[] entries = null;
 
-            String prepare = "00:00:00#" + ((System.currentTimeMillis() - myTime) / 1000) + "#" + getBatteryLevel();
-            entries = prepare.split("#");
+            //String prepare = "00:00:00#" + ((System.currentTimeMillis() - myTime) / 1000) + "#" + getBatteryLevel();
+            //entries = prepare.split("#");
 
-            generateCsvFile("myfile.csv", entries[0], entries[1], entries[2]);
+            //generateCsvFile("myfile.csv", entries[0], entries[1], entries[2]);
 
             Intent intent5 = new Intent(this, VideoActivity.class);
             startActivityForResult(intent5,5);
         }
 
         if(requestCode == 5) {
-            String[] entries = null;
+           // String[] entries = null;
 
-            String prepare = "00:00:00#" + ((System.currentTimeMillis() - myTime) / 1000) + "#" + getBatteryLevel();
-            entries = prepare.split("#");
+           // String prepare = "00:00:00#" + ((System.currentTimeMillis() - myTime) / 1000) + "#" + getBatteryLevel();
+           // entries = prepare.split("#");
 
-            generateCsvFile("myfile.csv", entries[0], entries[1], entries[2]);
+           // generateCsvFile("myfile.csv", entries[0], entries[1], entries[2]);
 
             Intent intent = new Intent(this, BlurActivity.class);
             startActivityForResult(intent, 1);

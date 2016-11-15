@@ -30,17 +30,16 @@ public class BlurActivity extends Activity {
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.blurimg);
         Bitmap blurredBitmap;
 
-        for(int i = 0; i < 20; i++){
+        for(int i = 0; i < 1000; i++){
             blurredBitmap= blur(bitmap);
-            imageView.setImageBitmap(blurredBitmap);
         }
-
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            public void run() {
-                finish();
-            }
-        }, 5000);
+        finish();
+        //Handler handler = new Handler();
+       // handler.postDelayed(new Runnable() {
+         //   public void run() {
+        //        finish();
+        //    }
+      //  }, 5000);
     }
 
     // Call back when the activity is going into the background

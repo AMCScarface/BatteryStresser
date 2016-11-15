@@ -30,14 +30,16 @@ public class ShaActivity extends Activity {
             InputStream in_s = res.openRawResource(R.raw.big);
 
             byte[] b = new byte[in_s.available()];
-            SHA1(convertToHex(b));
-
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                public void run() {
-                    finish();
-                }
-            }, 5000);
+            for(int i = 0; i < 16; i++) {
+                SHA1(convertToHex(b));
+            }
+            finish();
+            //Handler handler = new Handler();
+            //handler.postDelayed(new Runnable() {
+             //   public void run() {
+             //       finish();
+             //   }
+           // }, 5000);
         } catch (Exception e) {
             // e.printStackTrace();
             e.printStackTrace();
