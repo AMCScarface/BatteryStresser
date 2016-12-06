@@ -14,64 +14,23 @@
         android:text="Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="59dp"
         android:id="@+id/bt_start"
-        android:onClick="startTest" />
+        android:onClick="startTest"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
-    <CheckBox
-        android:text="Vibration On"
+    <TextView
+        android:text="Welcome to the Battery Stresser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/bt_start"
-        android:layout_marginTop="63dp"
-        android:id="@+id/cb_vibration" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="126dp"
+        android:id="@+id/tf_Title"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textSize="24sp"
+        android:textColor="@android:color/holo_red_dark" />
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_above="@+id/bt_start"
-        android:layout_centerHorizontal="true">
-        <RadioButton
-            android:text="Run till dead"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="47dp"
-            android:id="@+id/rb_full"
-            android:layout_above="@+id/bt_start"
-            android:layout_alignStart="@+id/cb_rendering"
-            android:duplicateParentState="false"
-            android:checked="true" />
-
-        <RadioButton
-            android:text="Step discharge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/rb_step"
-            android:layout_alignBaseline="@+id/rb_full"
-            android:layout_alignBottom="@+id/rb_full"
-            android:layout_toEndOf="@+id/cb_gputest"
-            android:layout_marginStart="45dp" />
-    </RadioGroup>
-
-    <CheckBox
-        android:text="GPU Stress test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cb_gputest"
-        android:layout_below="@+id/cb_vibration"
-        android:layout_alignStart="@+id/cb_vibration"
-        android:layout_marginTop="28dp" />
-
-    <CheckBox
-        android:text="Rendering test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cb_rendering"
-        android:layout_below="@+id/cb_gputest"
-        android:layout_alignStart="@+id/cb_gputest"
-        android:layout_marginTop="24dp" />
 </RelativeLayout>
